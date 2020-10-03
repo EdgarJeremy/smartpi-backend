@@ -7,6 +7,12 @@ const websocket: (io: socketio.Server) => void = (io: socketio.Server): void => 
 		socket.on('frame', (frame) => {
 			io.emit('stream', frame);
 		});
+		socket.on('hello', (data) => {
+			io.emit('hello', data);
+		});
+		socket.on('goodbye', (data) => {
+			io.emit('goodbye', data);
+		});
 	});
 };
 
