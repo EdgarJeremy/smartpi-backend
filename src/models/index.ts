@@ -23,6 +23,7 @@ const createModels: Function = (): ModelFactoryInterface => {
 		timezone: '+08:00',
 		operatorsAliases: false,
 		logging: process.env.SYSTEM_LOGGING === 'true' ? console.log : (msg: string) => {},
+		ssl: true
 	});
 	const db: ModelFactoryInterface = {
 		sequelize,
