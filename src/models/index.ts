@@ -19,6 +19,8 @@ const createModels: Function = (): ModelFactoryInterface => {
 		dialect: DB_DIALECT,
 		dialectOptions: {
 			useUTC: true,
+			//@ts-ignore
+			ssl: true
 		},
 		timezone: '+08:00',
 		operatorsAliases: false,
